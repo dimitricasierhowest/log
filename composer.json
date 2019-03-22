@@ -1,0 +1,22 @@
+{
+    "name": "dimitricasierhowest/log",
+    "authors": [
+        {
+            "name": "Dimiri Casier",
+            "email": "dimitri.casier@howest.be"
+        }
+    ],
+    "require": {},
+    "autoload": {
+        "psr-4": {
+            "Dimitricasierhowest\\Log\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Dimitricasierhowest\\Log\\LogServiceProvider"
+            ]
+        }
+    }
+}
