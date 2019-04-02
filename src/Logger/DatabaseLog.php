@@ -8,8 +8,18 @@
 
 namespace Dimitricasierhowest\Log\Logger;
 
+use Dimitricasierhowest\Log\Logger\Models\Log;
+use Dimitricasierhowest\Log\Logger\Log as BaseLog;
 
-class DatabaseLog
+class DatabaseLog extends BaseLog implements  LogInterface
+{
+    public function log($data){
+
+        Log::create([
+           "message" => $this->info($data)
+        ]);
+    }
+}
 {
 
 }

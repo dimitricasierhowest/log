@@ -9,9 +9,9 @@
 namespace Dimitricasierhowest\Log\Logger;
 
 
-class ScreenLog implements LogInterface
+class ScreenLog extends Log implements LogInterface
 {
     public function log($data){
-        var_dump($data);
+        var_dump($this->log($data));
     }
 }

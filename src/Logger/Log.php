@@ -12,6 +12,7 @@ use Carbon\Carbon;
 abstract class Log
 {
     protected function info($data){
+        
         return [
             Carbon::now()->toDateTimeString(),
             $data

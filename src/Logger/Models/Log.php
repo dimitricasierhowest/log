@@ -9,7 +9,12 @@
 namespace Dimitricasierhowest\Log\Logger\Models;
 
 
-class Log
-{
+use Illuminate\Database\Eloquent\Model;
 
+class Log  extends Model
+{
+    protected $guarded = [];
+    protected $casts = [
+        'message' => 'array'
+    ];
 }

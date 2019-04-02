@@ -2,6 +2,7 @@
 
 namespace Dimitricasierhowest\Log;
 
+use Dimitricasierhowest\Log\Logger\DatabaseLog;
 use Dimitricasierhowest\Log\Logger\FileLog;
 use Dimitricasierhowest\Log\Logger\LogInterface;
 use Dimitricasierhowest\Log\Logger\ScreenLog;
@@ -25,6 +26,9 @@ class LogServiceProvider extends ServiceProvider
 
             if($type == "file")
                 return new FileLog();
+
+            if($type == "database")
+                return new DatabaseLog();
 
             return null;
         });
